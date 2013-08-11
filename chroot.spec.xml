@@ -1,0 +1,27 @@
+<spec>
+    <install>
+        make
+        wget
+        m4
+        bzip2
+        glibc-devel
+    </install>
+    <mkdir>
+        /workspace/src
+        /opt/imagick
+    </mkdir>
+    <copy>
+    </copy>
+    <append path="/root/.bashrc">
+        export PATH=/opt/devtools/bin:$PATH
+
+        export CFLAGS=-I/opt/imagick/include
+        export CPPFLAGS=-I/opt/imagick/include
+        export LDFLAGS="-L/opt/imagick/lib -Wl,-rpath,/opt/imagick/lib"
+
+        cd /workspace
+    </append>
+    <unpack>
+        https://bitbucket.org/squeaky/centos-devtools/downloads/gcc-4.8.1-binutils-2.23.2-{arch}.tar.bz2 /
+    </unpack>
+</spec>
