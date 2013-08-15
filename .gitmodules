@@ -1,3 +1,6 @@
 [submodule "chroot"]
 	path = chroot
 	url = git@github.com:squeaky-pl/centos-chroot.git
+[submodule "build-tools"]
+	path = build-tools
+	url = git@github.com:squeaky-pl/build-tools.git

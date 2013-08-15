@@ -11,9 +11,11 @@
         /opt/imagick
     </mkdir>
     <copy>
+        build-tools /workspace
+        build.spec.xml /workspace
     </copy>
     <append path="/root/.bashrc">
-        export PATH=/opt/devtools/bin:$PATH
+        export PATH=/opt/devtools/bin:/opt/pypy/bin:$PATH
 
         export CFLAGS=-I/opt/imagick/include
         export CPPFLAGS=-I/opt/imagick/include
@@ -22,6 +24,7 @@
         cd /workspace
     </append>
     <unpack>
+        https://bitbucket.org/squeaky/portable-pypy/downloads/pypy-2.1-linux_{arch}-portable.tar.bz2 /opt/pypy 1
         https://bitbucket.org/squeaky/centos-devtools/downloads/gcc-4.8.1-binutils-2.23.2-{arch}.tar.bz2 /
     </unpack>
 </spec>

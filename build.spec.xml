@@ -1,0 +1,13 @@
+<spec>
+    <options>
+        cd /workspace/src
+        prefix /opt/imagick
+    </options>
+    <install>
+        http://www.ijg.org/files/jpegsrc.v9.tar.gz
+        http://downloads.sourceforge.net/project/libpng/libpng16/1.6.3/libpng-1.6.3.tar.gz
+        http://download.osgeo.org/libtiff/tiff-4.0.3.tar.gz
+        https://webp.googlecode.com/files/libwebp-0.3.1.tar.gz
+        http://www.imagemagick.org/download/ImageMagick-6.8.6-8.tar.bz2 --without-magick-plus-plus --without-x
+    </install>
+</spec>
