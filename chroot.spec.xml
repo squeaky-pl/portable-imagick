@@ -5,6 +5,8 @@
         m4
         bzip2
         glibc-devel
+        patch
+        zlib-devel
     </install>
     <mkdir>
         /workspace/src
@@ -19,7 +21,7 @@
 
         export CFLAGS=-I/opt/imagick/include
         export CPPFLAGS=-I/opt/imagick/include
-        export LDFLAGS="-L/opt/imagick/lib -Wl,-rpath,/opt/imagick/lib"
+        export LDFLAGS="-L/opt/imagick/lib -Wl,-rpath,/opt/imagick/lib:/opt/devtools/lib64"
 
         cd /workspace
     </append>
